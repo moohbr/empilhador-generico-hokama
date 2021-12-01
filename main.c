@@ -1,22 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct node{
-    int data;
-    struct node* node_above;
-} node;
-typedef struct node* p_node;
-
-p_node push();
-p_node pop (p_node list);
-
-void inicializeVectorBlock(p_node new_node);
-int is_footer(p_node node);
-void free_list(p_node list);
-void show_size(p_node list);
-void stack(p_node list);
-void choose_option(p_node list, char option);
-char menu(void);
+#include "pilha.h"
 
 int main(void)
 {
@@ -62,12 +46,12 @@ void inicializeVectorBlock(p_node new_node)
 
 p_node push()
 { 
-    p_node new_node =(p_node) malloc(sizeof(node));
+    p_node new_node = (p_node) malloc(sizeof(node));
     if(!new_node){
         exit(1);
     }
     else{
-        scanf("%d", &new_node->data);
+        scanf("%s", new_node->data);
   
         return new_node;
     }
@@ -162,7 +146,8 @@ void choose_option(p_node list, char option)
    
         case 'd':
             temporary_node = pop(list);
-            printf("%3d\n\n", temporary_node->data);
+
+            printf("%s\n", temporary_node->data);
 
             break;
         /*default:
