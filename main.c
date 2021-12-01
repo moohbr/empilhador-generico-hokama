@@ -30,6 +30,12 @@ int main(void)
 
         do{
             option=menu();
+            if (option == 'x'){
+                free_list(list);
+                free(list);
+                
+                return 0;
+            }
             choose_option(list, option);
         }
         while(option);
@@ -96,7 +102,9 @@ int is_footer(p_node node)
 void free_list(p_node list)
 {
     if(!is_footer(list)){
-        p_node next_Node, current_Node;
+        p_node next_Node;
+        p_node current_Node;
+
         current_Node = list->node_above;
         
         while(current_Node != NULL){
@@ -142,11 +150,6 @@ void choose_option(p_node list, char option)
     p_node temporary_node;
     
     switch(option){
-        case 'x':
-            free_list(list);
-            
-            break;
-  
         case 't':
             show_size(list);
 
