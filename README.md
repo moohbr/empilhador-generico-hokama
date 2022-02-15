@@ -1,13 +1,6 @@
 # empilhador-generico-hokama
-Trabalho 2º Semestre da UNIFEI - Profº Hokama
 
-O seu programa deverá ler da entrada padrão do sistema uma sequência de comandos,
-que podem empilhar um inteiro, empilhar um caractere ou desempilhar (imprimindo) mostrar
-o tamanho da pilha e sair do programa. Os comandos serão dados da seguinte maneira:
-● e <dado>: empilha o dado que pode ser um inteiro ou um caractere
-● d: desempilha e imprime o dado do topo da pilha
-● t: imprime o tamanho atual da pilha
-● x: termina o programa
+Your program should read from the system's standard input a sequence of commands, which can either push an integer, push a character, or pop (print) show the stack size and exit the program. The commands will be given as follows: ● e : push the data that can be an integer or a character ● d: pop and print the data from the top of the stack ● t: print the current size of the stack ● x: terminate the program
 
 INPUT:  
 e 10
